@@ -24,7 +24,10 @@ RUN cd frontend && npm run build
 # Expose the backend port
 EXPOSE 3000
 
+# Install concurrently to run both frontend and backend
+RUN npm install concurrently --save-dev
+
 # Use concurrently to run both frontend and backend
-CMD ["npx", "concurrently", \
-     "\"node backend/server.js\"", \
-     "\"npm --prefix frontend run serve\""]
+CMD ["npx", "concurrently", 
+     "node backend/server.js", 
+     "npm --prefix frontend run serve"]
