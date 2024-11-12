@@ -28,4 +28,4 @@ EXPOSE 3000
 RUN npm install concurrently --save-dev
 
 # Use concurrently to run both frontend and backend
-CMD ["npx", "concurrently", "node backend/server.js", "npm --prefix frontend run serve"]
+CMD ["npx", "concurrently", "node backend/server.js", "npm --prefix frontend run preview"]
