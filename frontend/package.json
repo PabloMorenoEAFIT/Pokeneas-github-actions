@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "vite --host",
     "build": "vite build",
-    "preview": "vite preview",
-    "serve": "vite preview",
+    "preview": "vite preview --host",
+    "serve": "vite preview --host",
     "start:all": "concurrently \"npm run dev\" \"cd ../backend && node server.js\""
   },
   "devDependencies": {
